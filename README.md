@@ -1,2 +1,2 @@
 # DVA270
-Programming laborations
+Programming laborations and other bussing activites such as balling

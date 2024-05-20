@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+void print_array(int size, int matrix[][size]);
+
+int main() {
+    int size = 49;
+    int matrix[size][size];
+    
+    // Initialize the matrix to 0
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            matrix[i][j] = 0;
+        }
+    }
+    
+    int x, y;
+    print_array(size, matrix);
+    
+    printf("Enter x: ");
+    scanf("%d", &y);
+    printf("Enter y: ");
+    scanf("%d", &x);
+    
+    if (x >= 0 && x < size && y >= 0 && y < size) {
+        matrix[x][y] = 1;
+    } else {
+        printf("Invalid indices.\n");
+    }
+    
+    print_array(size, matrix);
+    
+    return 0;
+}
+
+void print_array(int size, int matrix[][size]) {
+    printf("    ");
+    for (int j = 0; j < size; j++) {
+        printf("%2d ", j); // Print column numbers
+    }
+    printf("\n");
+    
+    for (int i = size - 1; i >= 0; i--) { // Print from bottom to top
+        printf("%2d ", i); // Print row number
+        for (int j = 0; j < size; j++) {
+            printf("%2d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+}

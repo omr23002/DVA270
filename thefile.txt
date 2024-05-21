@@ -40,7 +40,7 @@ void print_array(int size, int matrix[][size]) {
     printf("\n");
     
     for (int i = size - 1; i >= 0; i--) { // Print from bottom to top
-        printf("%2d ", i); // Print row number
+        printf("%2d ", i + 1); // Print row number
         for (int j = 0; j < size; j++) {
             printf("%2d ", matrix[i][j]);
         }

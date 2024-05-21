@@ -35,7 +35,7 @@ int main() {
 void print_array(int size, int matrix[][size]) {
     printf("    ");
     for (int j = 0; j < size; j++) {
-        printf("%2d ", j); // Print column numbers
+        printf("%2d ", j + 1); // Print column numbers
     }
     printf("\n");
     
